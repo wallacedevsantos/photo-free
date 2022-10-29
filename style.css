@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100%;
+  background-color: black;
+  color: blanchedalmond;
+}
+
+/* section {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+
+.container {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  align-items: flex-start;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.searchdiv form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.searchdiv {
+  background-color: black;
+  position: fixed;
+  float: bottom;
+  bottom: 0;
+  right: 50% - 50%;
+  width: 100%;
+  text-align: center;
+  opacity: 80%;
+
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+input {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  padding: 2px 4px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  box-shadow: 0 0 5px black;
+}
+
+button {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  color: rgb(0, 0, 0);
+  transition: 1.5s;
+  cursor: pointer;
+  background-color: aliceblue;
+  padding: 6px;
+  border-radius: 100%;
+  outline: none;
+  border: none;
+}
+
+i {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.imagens {
+  margin-top: 1.5rem;
+  width: 300px;
+  height: auto;
+  scroll-snap-align: center;
+  max-width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 2/3;
+  grid-template-columns: 300px 300px;
+  margin-top: 15px;
+  background-position: 50% 50%;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image-popup {
+  display: none;
+  position: fixed;
+  width: 90%;
+  height: 80vh;
+  background: rgba(26, 26, 26, 0.685);
+  transform: translate(-50, -50);
+}
