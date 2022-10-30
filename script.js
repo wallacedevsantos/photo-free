@@ -45,5 +45,3 @@ if (searchParam == "") {
 } else {
   searchImages();
 }
-
-getImages();
