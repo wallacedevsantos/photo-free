@@ -1,4 +1,4 @@
-let searchParam = location.search.split("=").pop();
+let searchParam = location.search.split("=").pop().toLowerCase();
 
 let pagen = 1;
 
@@ -8,7 +8,7 @@ const access_key2 = "jAeYzmbebPXJ22yShxX4uijWiBn4WxBc7VycVMm4yig";
 
 const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key2}&page=${pagen}&count=30`;
 
-const search_photo_url = `https://api.unsplash.com/search/photos?&query=${searchParam}&page=1&per_page=30&client_id=${access_key2}`;
+const search_photo_url = `https://api.unsplash.com/search/photos?&query=${searchParam.toLowerCase()}&page=1&per_page=30&client_id=${access_key2}`;
 
 const galley = document.querySelector(".container");
 
@@ -51,7 +51,7 @@ if (searchParam == "") {
 }
 
 const gerarMaisImgs = (index) => {
-  let search_photo_url = `https://api.unsplash.com/search/photos?&query=${searchParam}&page=${index}&per_page=30&client_id=${access_key2}`;
+  let search_photo_url = `https://api.unsplash.com/search/photos?&query=${searchParam.toLowerCase()}&page=${index}&per_page=30&client_id=${access_key2}`;
   fetch(search_photo_url)
     .then((res) => res.json())
     .then((data) => {
