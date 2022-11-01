@@ -82,7 +82,7 @@ form {
   border-radius: 60px;
   outline: none;
   border: none;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 button {
@@ -101,6 +101,12 @@ button {
   outline: none;
   border: none;
   font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(55, 143, 55);
+  color: aliceblue;
 }
 
 i {
@@ -143,5 +149,4 @@ img {
   font-size: 1.2rem;
   outline: none;
   border: none;
-  transition: all 0.3s ease-in-out;
 }
