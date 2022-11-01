@@ -32,7 +32,7 @@ main {
 
 .content {
   width: 90%;
-  height: 100vh;
+  height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,51 +57,48 @@ main {
   display: none;
 }
 
-.searchdiv form {
+form {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .searchdiv {
-  background-color: black;
+  background: black;
   position: fixed;
   float: bottom;
-  bottom: 0;
-  right: 50% - 50%;
+  bottom: 5px;
   width: 100%;
+  height: 50px;
   text-align: center;
-  opacity: 80%;
-
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2px;
 }
 
-input {
-  width: 100%;
+.search-txt {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
   text-align: center;
   font-size: 1rem;
   padding: 2px 4px;
-  border-radius: 10px;
+  border-radius: 60px;
   outline: none;
   border: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
-
-input:focus {
-  box-shadow: 0 0 5px black;
 }
 
 button {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
   width: 25px;
   height: 25px;
   color: rgb(0, 0, 0);
@@ -112,6 +109,7 @@ button {
   border-radius: 100%;
   outline: none;
   border: none;
+  font-weight: 400;
 }
 
 i {
@@ -121,7 +119,6 @@ i {
 }
 
 .imagens {
-  margin-top: 1.5rem;
   width: 300px;
   height: auto;
   scroll-snap-align: center;
@@ -133,7 +130,8 @@ img {
   height: 100%;
   aspect-ratio: 2/3;
   grid-template-columns: 300px 300px;
-  margin-top: 15px;
+  /* margin-top: 15px; */
+  margin: 10px;
   background-position: 50% 50%;
   background-size: cover;
   object-fit: cover;
@@ -147,4 +145,13 @@ img {
   height: 80vh;
   background: rgba(26, 26, 26, 0.685);
   transform: translate(-50, -50);
+}
+
+.next-page {
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
 }
