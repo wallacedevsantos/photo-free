@@ -50,4 +50,25 @@ if (searchParam == "") {
   searchImages();
 }
 
-getImages();
+const gerarMaisImgs = (index) => {
+  let search_photo_url = `https://api.unsplash.com/search/photos?&query=${searchParam}&page=${index}&per_page=30&client_id=${access_key2}`;
+  fetch(search_photo_url)
+    .then((res) => res.json())
+    .then((data) => {
+      allImages = data.results;
+      makeImages(allImages);
+    });
+};
+
+next.addEventListener("click", (e) => {
+  this.maisImagens(e);
+});
+
+function maisImagens(e) {
+  let index = (pagen += 1);
+  if (searchParam == "") {
+    getImages(index);
+  } else {
+    gerarMaisImgs(index);
+  }
+}
