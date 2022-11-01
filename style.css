@@ -13,15 +13,6 @@ body {
   color: blanchedalmond;
 }
 
-/* section {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 main {
   width: 100%;
   height: 100vh;
@@ -130,7 +121,6 @@ img {
   height: 100%;
   aspect-ratio: 2/3;
   grid-template-columns: 300px 300px;
-  /* margin-top: 15px; */
   margin: 10px;
   background-position: 50% 50%;
   background-size: cover;
