@@ -36,11 +36,24 @@ const searchImages = () => {
 
 const makeImages = (data) => {
   data.forEach((item, index) => {
-    let img = document.createElement("img");
-    img.src = item.urls.regular;
-    img.className = "imagens";
+    let div = document.createElement("div");
+    // let img = document.createElement("img");
+    // img.src = item.urls.regular;
+    // img.className = "imagens";
+    div.className = "imagens";
+    div.innerHTML = `<img src=${item.urls.thumb}/>
+    <p>Foto: ${item.user.name}</p>
+    <a href=${
+      item.links.download + "&force=true"
+    } target="_blank"><i class="fa-solid fa-download"></i></a>`;
 
-    galley.appendChild(img);
+    // img.setAttribute("href", item.urls.full);
+    // img.setAttribute("target", "_blank");
+    // img.addEventListener("click", function () {
+    //   console.log("clicked");
+    //   window.open(item.urls.full, "_blank");
+    // });
+    galley.appendChild(div);
   });
 };
 
