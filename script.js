@@ -6,9 +6,9 @@ const access_key = "xetK5V9k_ZwWC5DEuWoCqiuZul_dgf1EEVfn6vuN5oY";
 
 const access_key2 = "jAeYzmbebPXJ22yShxX4uijWiBn4WxBc7VycVMm4yig";
 
-const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key2}&page=${pagen}&count=30`;
+const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key2}&page=${pagen}&count=15`;
 
-const search_photo_url = `https://api.unsplash.com/search/photos?&query=${searchParam.toLowerCase()}&page=1&per_page=30&client_id=${access_key2}`;
+const search_photo_url = `https://api.unsplash.com/search/photos?&query=${searchParam.toLowerCase()}&page=1&per_page=15&client_id=${access_key2}`;
 
 const galley = document.querySelector(".container");
 
@@ -41,9 +41,9 @@ const makeImages = (data) => {
     // img.src = item.urls.regular;
     // img.className = "imagens";
     div.className = "imagens";
-    div.innerHTML = `<img src=${item.urls.thumb}/>
+    div.innerHTML = `<img src=${item.urls.raw + "&w=600"} loading="lazy"/>
     <p>Foto: ${item.user.name}</p>
-    <a href=${
+    <a rel="preload" href=${
       item.links.download + "&force=true"
     } target="_blank"><i class="fa-solid fa-download"></i></a>`;
 
